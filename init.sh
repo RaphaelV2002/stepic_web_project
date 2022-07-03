@@ -1,5 +1,3 @@
-sudo ln -s homeboxwebetcnginx.conf  etcnginxsites-enabledtest.conf
-sudo etcinit.dnginx restart
-sudo ln -s homeboxwebetcgunicorn.conf   etcgunicorn.dtest
-sudo etcinit.dgunicorn restart
-sudo etcinit.dmysql start
+sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
+sudo rm -rf /etc/nginx/sites-enabled/default
+sudo /etc/init.d/nginx restart
